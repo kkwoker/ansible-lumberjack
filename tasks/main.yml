@@ -1,0 +1,10 @@
+---
+- name: Clone logstash-forwarder repository
+  git:
+    repo: git://github.com/elasticsearch/logstash-forwarder.git
+    dest: /opt/logstash-forwarder
+
+- name: Execute Go on logstash-forwarder
+  command: go build -o logstash-forwarder
+  args:
+    chdir: /opt/logstash-forwarder
