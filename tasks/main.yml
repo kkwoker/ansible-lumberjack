@@ -14,7 +14,7 @@
     src: logstash-forwarder.crt
     dest: /opt/logstash-forwarder/logstash-forwarder.crt
 
-- name: Configure for nginx
+- name: Configure for forwarder
   template:
     src: conf.d/forwarder.conf
     dest: /opt/logstash-forwarder/forwarder.conf
