@@ -1,6 +1,5 @@
 ---
 dependencies:
-  - role: telusdigital.apt-repository
   - role: kkwoker.go
 galaxy_info:
   author: "Kinnan Kwok"
