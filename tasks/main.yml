@@ -1,7 +1,7 @@
 ---
 - name: Clone logstash-forwarder repository
   git:
-    repo: git://github.com/elasticsearch/logstash-forwarder.git
+    repo: git://github.com/etsy/logstash-forwarder.git
     dest: /opt/logstash-forwarder
 
 - name: Execute Go on logstash-forwarder
