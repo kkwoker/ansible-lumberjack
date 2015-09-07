@@ -8,3 +8,8 @@
   command: go build -o logstash-forwarder
   args:
     chdir: /opt/logstash-forwarder
+
+- name: Upload public certificate
+  template:
+    src: etc/pki/tls/logstash-forwarder.crt
+    dest: /etc/pki/tls/logstash-forwarder.crt
