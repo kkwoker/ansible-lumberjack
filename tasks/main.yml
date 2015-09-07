@@ -15,7 +15,7 @@
     dest: /opt/logstash-forwarder/logstash-forwarder.crt
 
 - name: Configure for nginx
-	template:
-	  src: conf.d/forwarder.conf
-	  dest: /opt/logstash-forwarder/forwarder.conf
+  template:
+    src: conf.d/forwarder.conf
+    dest: /opt/logstash-forwarder/forwarder.conf
   when: lumberjack_nginx_enabled
