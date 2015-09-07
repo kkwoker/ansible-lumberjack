@@ -15,6 +15,11 @@
   with_items:
     - logstash-forwarder
 
+- name: Creates directory
+  file: 
+    path: /opt/logstash-forwarder
+    state: directory
+
 - name: Upload public certificate
   template:
     src: logstash-forwarder.crt
