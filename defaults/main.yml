@@ -4,8 +4,8 @@ lumberjack_nginx_enabled: no
 lumberjack_php_enabled: no
 lumberjack_cert: "{{ mandatory }}"
 
-lumberjack_group: lumberjack
-lumberjack_user: lumberjack
+lumberjack_group: root
+lumberjack_user: root
 
 lumberjack_log_root: "{{ log_root | default('/var/log') }}/lumberjack"
 lumberjack_runtime_root: "{{ runtime_root | default('/var/run') }}/lumberjack"
