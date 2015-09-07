@@ -3,6 +3,17 @@ dependencies:
   - role: telusdigital.apt-repository
     repository_key: "0xd27d666cd88e42b4"
     repository_url: "deb http://packages.elasticsearch.org/logstashforwarder/debian stable main"
+  - role: telusdigital.upstart
+    upstart_name: lumberjack
+    upstart_description: 'lumberjack logstash-forwarder'
+    upstart_exec_path: /opt/logstash-forwarder/bin/logstash-forwarder
+    upstart_exec_flags:
+      - /etc/lumberjack/lumberjack.conf
+    upstart_user: "{{ lumberjack_user }}"
+    upstart_group: "{{ lumberjack_group }}"
+    upstart_log_root: "{{ lumberjack_log_root }}"
+    upstart_pidfile_path: "{{ lumberjack_pidfile_path }}"
+    upstart_runtime_root: "{{ lumberjack_runtime_root }}"
   - role: kkwoker.go
 galaxy_info:
   author: "Kinnan Kwok"
