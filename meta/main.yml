@@ -8,7 +8,7 @@ dependencies:
     upstart_description: 'lumberjack logstash-forwarder'
     upstart_exec_path: /opt/logstash-forwarder/bin/logstash-forwarder
     upstart_exec_flags:
-      -config
+      - config
       - /etc/lumberjack/lumberjack.conf
     upstart_user: "{{ lumberjack_user }}"
     upstart_group: "{{ lumberjack_group }}"
