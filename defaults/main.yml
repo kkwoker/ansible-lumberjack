@@ -1,4 +1,4 @@
 ---
 
 lumberjack_nginx_enabled: no
-lumberjack_cert: {{ mandatory }}
+lumberjack_cert: "{{ mandatory }}"
