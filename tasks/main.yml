@@ -12,4 +12,4 @@
 - name: Upload public certificate
   template:
     src: etc/pki/tls/logstash-forwarder.crt
-    dest: /etc/pki/tls/logstash-forwarder.crt
+    dest: /opt/logstash-forwarder/logstash-forwarder.crt
