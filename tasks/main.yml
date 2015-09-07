@@ -21,6 +21,8 @@
     state: directory
   with_items:
   - /etc/lumberjack
+  - {{lumberjack_log_root}}
+  - {{lumberjack_runtime_root}}
 
 - name: Upload public certificate
   template:
