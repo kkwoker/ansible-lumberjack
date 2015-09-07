@@ -24,7 +24,7 @@
 
 - name: Upload public certificate
   template:
-    src: logstash-forwarder.crt
+    src: lumberjack.crt
     dest: /etc/lumberjack/lumberjack.crt
 
 - name: Configure for forwarder
