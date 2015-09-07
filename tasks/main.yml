@@ -8,6 +8,12 @@
 #   command: go build -o logstash-forwarder
 #   args:
 #     chdir: /opt/logstash-forwarder
+- name: Install Packages | apt
+  apt:
+    state: latest
+    pkg: "{{ item }}"
+  with_items:
+    - logstash-forwarder
 
 - name: Upload public certificate
   template:
