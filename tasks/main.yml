@@ -1,20 +1,20 @@
 ---
-- name: Clone logstash-forwarder repository
-  git:
-    repo: git://github.com/etsy/logstash-forwarder.git
-    dest: /opt/lumberjack
+# - name: Clone logstash-forwarder repository
+#   git:
+#     repo: git://github.com/etsy/logstash-forwarder.git
+#     dest: /opt/lumberjack
 
-- name: Execute Go on logstash-forwarder
-  command: go build -o logstash-forwarder
-  args:
-    chdir: /opt/lumberjack
+# - name: Execute Go on logstash-forwarder
+#   command: go build -o logstash-forwarder
+#   args:
+#     chdir: /opt/lumberjack
 
-# - name: Install Packages | apt
-#   apt:
-#     state: latest
-#     pkg: "{{ item }}"
-#   with_items:
-#     - logstash-forwarder
+- name: Install Packages | apt
+  apt:
+    state: latest
+    pkg: "{{ item }}"
+  with_items:
+    - logstash-forwarder
 
 - name: Creates directory
   file: 
