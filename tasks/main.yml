@@ -1,13 +1,13 @@
 ---
-# - name: Clone logstash-forwarder repository
-#   git:
-#     repo: git://github.com/etsy/logstash-forwarder.git
-#     dest: /opt/logstash-forwarder
+- name: Clone logstash-forwarder repository
+  git:
+    repo: git://github.com/etsy/logstash-forwarder.git
+    dest: /opt/logstash-forwarder
 
-# - name: Execute Go on logstash-forwarder
-#   command: go build -o logstash-forwarder
-#   args:
-#     chdir: /opt/logstash-forwarder
+- name: Execute Go on logstash-forwarder
+  command: go build -o logstash-forwarder
+  args:
+    chdir: /opt/logstash-forwarder
 - name: Install Packages | apt
   apt:
     state: latest
