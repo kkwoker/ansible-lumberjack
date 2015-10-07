@@ -23,4 +23,4 @@ License
 
 Contributors
 ------------
-* [Kinnan Kwok](https://colstrom.github.io/) | [e-mail](mailto:kkwoker@gmail.com)
+* Kinnan Kwok
